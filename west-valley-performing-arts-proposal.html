@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premier Recycle — Proposal | West Valley College Performing Arts Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #132150;
+      --navy-light: #1e3270;
+      --blue: #1B6FD8;
+      --blue-light: #3b82f6;
+      --blue-pale: #dbeafe;
+      --white: #ffffff;
+      --off-white: #f5f7fa;
+      --gray: #6b7280;
+      --light-gray: #e5e7eb;
+      --text: #0d1a3a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+      background: var(--off-white);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: var(--navy);
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-img {
+      height: 44px;
+      width: auto;
+      display: block;
+    }
+
+    .header-meta {
+      text-align: right;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.82rem;
+      line-height: 1.7;
+    }
+
+    .header-meta strong {
+      color: var(--white);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0d1a3a 0%, var(--navy) 55%, var(--navy-light) 100%);
+      color: var(--white);
+      padding: 80px 40px 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blue-light);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 .highlight {
+      background: var(--blue);
+      color: var(--white);
+      padding: 0 8px;
+      display: inline;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      max-width: 640px;
+      margin: 0 auto 36px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      margin-top: 44px;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat .number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .hero-stat .label {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-top: 4px;
+    }
+
+    .stat-divider {
+      width: 1px;
+      background: rgba(255,255,255,0.2);
+      align-self: stretch;
+    }
+
+    /* ── PROJECT INFO BAND ── */
+    .project-band {
+      background: var(--blue-pale);
+      border-bottom: 3px solid var(--blue);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .project-band .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-band .item-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+
+    .project-band .item-value {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      padding: 72px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-lead {
+      font-size: 1.08rem;
+      color: var(--gray);
+      max-width: 680px;
+      line-height: 1.75;
+      margin-bottom: 48px;
+    }
+
+    /* ── COMPETITOR COMPARISON ── */
+    .compare-section {
+      background: var(--navy);
+      color: var(--white);
+      padding: 72px 40px;
+    }
+
+    .compare-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .compare-section .section-title {
+      color: var(--white);
+    }
+
+    .compare-section .section-lead {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .compare-card {
+      border-radius: 12px;
+      padding: 32px;
+    }
+
+    .compare-card.premier {
+      background: rgba(255,255,255,0.07);
+      border: 2px solid var(--blue-light);
+    }
+
+    .compare-card.competitor {
+      background: rgba(0,0,0,0.25);
+      border: 2px solid rgba(255,255,255,0.1);
+    }
+
+    .compare-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .compare-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 99px;
+    }
+
+    .compare-badge.premier-badge {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .compare-badge.competitor-badge {
+      background: rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.6);
+    }
+
+    .compare-card-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .compare-card.premier .compare-card-name {
+      color: var(--blue-light);
+    }
+
+    .compare-card.competitor .compare-card-name {
+      color: rgba(255,255,255,0.5);
+    }
+
+    .compare-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .compare-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .check-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-size: 0.65rem;
+      font-weight: 900;
+    }
+
+    .check-icon.yes {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .check-icon.no {
+      background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.35);
+    }
+
+    .compare-list .text-dim {
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ── SERVICES ── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 32px 28px;
+      border: 1px solid var(--light-gray);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--navy);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .service-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: var(--white);
+    }
+
+    .service-card h3 {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 10px;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+
+    .service-card p {
+      font-size: 0.92rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    /* ── INTEGRATION CALLOUT ── */
+    .integration-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      border-radius: 16px;
+      padding: 48px 48px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-top: 0;
+      color: var(--white);
+    }
+
+    .integration-icon-wrap {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+    }
+
+    .integration-content h3 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+      color: var(--blue-light);
+    }
+
+    .integration-content p {
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    .integration-pillars {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .integration-pillar {
+      padding: 6px 16px;
+      border-radius: 99px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      background: rgba(59,130,246,0.25);
+      color: #bfdbfe;
+      border: 1px solid rgba(59,130,246,0.4);
+    }
+
+    /* ── TRACK RECORD ── */
+    .track-section {
+      background: var(--navy);
+      padding: 72px 40px;
+    }
+
+    .track-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .track-section .section-title {
+      color: var(--white);
+    }
+
+    .track-section .section-lead {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .track-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 200px;
+      gap: 12px;
+    }
+
+    .track-card {
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      cursor: default;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .track-card:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+      z-index: 2;
+    }
+
+    .track-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.15) 60%, transparent 100%);
+      border-radius: 10px;
+    }
+
+    .track-card--large {
+      grid-column: span 2;
+    }
+
+    .track-card__inner {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px 22px;
+    }
+
+    .track-card__label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue-light);
+      margin-bottom: 4px;
+    }
+
+    .track-card__name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .track-card--large .track-card__name {
+      font-size: 1.45rem;
+    }
+
+    .track-card__location {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 3px;
+      font-weight: 500;
+    }
+
+    /* Featured card highlight */
+    .track-card--featured::after {
+      content: 'FAMILIAR CAMPUS';
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--blue);
+      color: var(--white);
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      padding: 4px 10px;
+      border-radius: 99px;
+      text-transform: uppercase;
+    }
+
+    /* Placeholder bg for track cards without photos */
+    .track-card--placeholder {
+      background-color: var(--navy-light);
+    }
+
+    .track-grid-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 280px;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .track-grid-secondary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 160px;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .track-grid-small {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 130px;
+      gap: 12px;
+    }
+
+    .track-section-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin: 28px 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      .track-grid, .track-grid-featured, .track-grid-secondary, .track-grid-small {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 160px;
+      }
+      .track-section { padding: 48px 20px; }
+    }
+
+    @media (max-width: 480px) {
+      .track-grid, .track-grid-featured, .track-grid-secondary, .track-grid-small {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 150px;
+      }
+      .track-card--large { grid-column: span 1; }
+    }
+
+    /* ── TESTIMONIAL ── */
+    .testimonial-wrap {
+      background: var(--navy);
+      border-radius: 16px;
+      padding: 48px;
+      display: flex;
+      gap: 36px;
+      align-items: flex-start;
+      margin-top: 0;
+    }
+
+    .quote-mark {
+      font-size: 6rem;
+      line-height: 0.7;
+      color: var(--blue-light);
+      font-family: Georgia, serif;
+      flex-shrink: 0;
+    }
+
+    .testimonial-text {
+      font-size: 1.18rem;
+      color: var(--white);
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-author {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--blue-light);
+      letter-spacing: 0.06em;
+    }
+
+    .testimonial-company {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.82rem;
+      margin-top: 2px;
+    }
+
+    /* ── PRICING ── */
+    .pricing-section {
+      background: var(--white);
+      padding: 72px 40px;
+    }
+
+    .pricing-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      margin-bottom: 32px;
+    }
+
+    .pricing-table thead tr {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .pricing-table thead th {
+      padding: 14px 20px;
+      text-align: left;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .pricing-table .group-header {
+      background: var(--blue-pale);
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .pricing-table .group-header td {
+      padding: 12px 20px;
+    }
+
+    .pricing-table tbody tr:not(.group-header) td {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--light-gray);
+      font-size: 0.93rem;
+      color: var(--text);
+      background: var(--white);
+    }
+
+    .pricing-table tbody tr:not(.group-header):last-child td {
+      border-bottom: none;
+    }
+
+    .pricing-table .price-input {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1rem;
+    }
+
+    .included-badge {
+      background: #d1fae5;
+      color: #065f46;
+      padding: 3px 10px;
+      border-radius: 99px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .terms-box {
+      background: var(--off-white);
+      border: 1px solid var(--light-gray);
+      border-radius: 10px;
+      padding: 24px 28px;
+      font-size: 0.82rem;
+      color: var(--gray);
+      line-height: 1.8;
+    }
+
+    .terms-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .terms-box ul li::before {
+      content: '·  ';
+      font-weight: 900;
+      color: var(--navy);
+    }
+
+    /* ── SIGNATURE ── */
+    .sig-section {
+      background: var(--off-white);
+      padding: 72px 40px;
+    }
+
+    .sig-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .sig-cta {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .sig-cta h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .sig-cta p {
+      color: var(--gray);
+      font-size: 1rem;
+    }
+
+    .sig-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .sig-block {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .sig-block h4 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+
+    .sig-field {
+      margin-bottom: 20px;
+    }
+
+    .sig-field label {
+      font-size: 0.78rem;
+      color: var(--gray);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .sig-field .sig-line {
+      width: 100%;
+      border-bottom: 2px solid var(--light-gray);
+      height: 36px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 4px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 28px 40px;
+      font-size: 0.82rem;
+    }
+
+    footer a {
+      color: var(--blue-light);
+      text-decoration: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .header { padding: 14px 20px; }
+      .hero { padding: 56px 20px 48px; }
+      .project-band { gap: 24px; padding: 16px 20px; }
+      .section { padding: 48px 20px; }
+      .compare-section { padding: 48px 20px; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .integration-banner { flex-direction: column; padding: 32px 24px; gap: 24px; }
+      .testimonial-wrap { flex-direction: column; gap: 16px; padding: 32px 24px; }
+      .pricing-section { padding: 48px 20px; }
+      .sig-grid { grid-template-columns: 1fr; }
+      .sig-section { padding: 48px 20px; }
+      .hero-stats { gap: 28px; }
+      .stat-divider { display: none; }
+    }
+
+    @media print {
+      .header { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- HEADER -->
+<!-- ══════════════════════════════════════════ -->
+<header class="header">
+  <div class="logo-area">
+    <img class="logo-img" src="white premier logo (1).png" alt="Premier Recycle" />
+  </div>
+  <div class="header-meta">
+    <strong>Sales Proposal</strong><br>
+    West Valley College — Performing Arts Center · Thompson Builders<br>
+    Proposal #1948 &nbsp;·&nbsp; March 27, 2026
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- HERO -->
+<!-- ══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-eyebrow">Local Expertise. Exceptional Service. Zero Guesswork.</div>
+  <h1>
+    The C&amp;D Recycler<br>
+    <span class="highlight">Built for Builders.</span>
+  </h1>
+  <p class="hero-sub">
+    Managing a construction project is complicated enough. Your recycling partner shouldn't add to it. Premier Recycle is a true partner on your job site — we own the trucks and the sorting facility, controlling every step from first bin to final closeout. That means accurate diversion data, reliable service, and one team that's with you the whole way.
+  </p>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="number">30+</div>
+      <div class="label">Years Family Owned &amp; Operated</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="hero-stat">
+      <div class="number">#1</div>
+      <div class="label">Largest Hand-Sort C&amp;D Facility in the U.S.</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="hero-stat">
+      <div class="number">100%</div>
+      <div class="label">Vertically Integrated Operations</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- PROJECT INFO BAND -->
+<!-- ══════════════════════════════════════════ -->
+<div class="project-band">
+  <div class="item">
+    <div class="item-label">Project</div>
+    <div class="item-value">West Valley College — Performing Arts Center</div>
+  </div>
+  <div class="item">
+    <div class="item-label">Address</div>
+    <div class="item-value">14000 Fruitvale Ave, Saratoga, CA 95070</div>
+  </div>
+  <div class="item">
+    <div class="item-label">Prepared For</div>
+    <div class="item-value">Thompson Builders</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- WHY PREMIER vs. COMPETITOR -->
+<!-- ══════════════════════════════════════════ -->
+<section class="compare-section">
+  <div class="compare-inner">
+    <div class="section-eyebrow">Why It Matters Who You Choose</div>
+    <h2 class="section-title">Fully Integrated vs. Fragmented</h2>
+    <p class="section-lead">
+      Not all recyclers are the same. Here's why it matters who you choose.
+    </p>
+
+    <div class="compare-grid">
+      <!-- PREMIER -->
+      <div class="compare-card premier">
+        <div class="compare-card-header">
+          <span class="compare-badge premier-badge">The Gold Standard</span>
+          <div class="compare-card-name">Premier Recycle</div>
+        </div>
+        <ul class="compare-list">
+          <li>
+            <div class="check-icon yes">✓</div>
+            <span><strong>San Jose-based</strong> — minutes from campus, fast response, no regional dispatch delays</span>
+          </li>
+          <li>
+            <div class="check-icon yes">✓</div>
+            <span><strong>We've worked at West Valley College</strong> — familiar with campus standards and operations</span>
+          </li>
+          <li>
+            <div class="check-icon yes">✓</div>
+            <span><strong>Fully vertically integrated</strong> — we own the trucks and the sorting facility. One company, full chain of custody</span>
+          </li>
+          <li>
+            <div class="check-icon yes">✓</div>
+            <span><strong>Diversion tags produced in-house</strong> — no scrambling, no calls to third-party facilities</span>
+          </li>
+          <li>
+            <div class="check-icon yes">✓</div>
+            <span><strong>Clean, defensible data</strong> — every load tracked at our own facility, ready for any jurisdiction or permit requirement</span>
+          </li>
+          <li>
+            <div class="check-icon yes">✓</div>
+            <span><strong>Best service in the industry</strong> — real people answer your calls, timely responses, and a team that treats your schedule like it's their own</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- COMPETITOR -->
+      <div class="compare-card competitor">
+        <div class="compare-card-header">
+          <span class="compare-badge competitor-badge">The Alternative</span>
+          <div class="compare-card-name">Hauler-Only Provider</div>
+        </div>
+        <ul class="compare-list">
+          <li>
+            <div class="check-icon no">✗</div>
+            <span class="text-dim">Out-of-area dispatch — slower response, drivers unfamiliar with the campus</span>
+          </li>
+          <li>
+            <div class="check-icon no">✗</div>
+            <span class="text-dim">No history at West Valley — learning the site on your dime</span>
+          </li>
+          <li>
+            <div class="check-icon no">✗</div>
+            <span class="text-dim">Material handed off to whichever facility is cheapest — no downstream ownership</span>
+          </li>
+          <li>
+            <div class="check-icon no">✗</div>
+            <span class="text-dim">Diversion tags require calling multiple facilities to piece together documentation</span>
+          </li>
+          <li>
+            <div class="check-icon no">✗</div>
+            <span class="text-dim">Inconsistent records across facilities — harder to reconcile, harder to defend</span>
+          </li>
+          <li>
+            <div class="check-icon no">✗</div>
+            <span class="text-dim">Calls go to voicemail, tickets go into a queue — you're a job number, not a partner</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SERVICES -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-eyebrow">What We Offer</div>
+  <h2 class="section-title">Full-Service C&amp;D Recycling, End to End</h2>
+  <p class="section-lead">
+    Everything you need, managed under one roof.
+  </p>
+
+  <div class="services-grid">
+    <!-- Service 1 -->
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+        </svg>
+      </div>
+      <h3>Debris Bin Rental &amp; Hauling</h3>
+      <p>
+        Roll-off bins in 10, 20, and 40 yard sizes. Dependable pickups, quick turnaround — no surprises. Covers, pick rings, and Totester mini carts available for tight footprints.
+      </p>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/>
+        </svg>
+      </div>
+      <h3>In-House Sorting Facility</h3>
+      <p>
+        The largest hand-sort C&amp;D facility in the U.S., owned and operated by Premier. Every load sorted, weighed, and documented by the same company that picked it up.
+      </p>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM7 17v-2h10v2H7zm0-4v-2h10v2H7zm0-4V7h5v2H7z"/>
+        </svg>
+      </div>
+      <h3>Diversion Documentation &amp; Reporting</h3>
+      <p>
+        Monthly recycled material reports, waste management plans, and permit recycling refund requests — all produced from our own facility data and ready when you need them.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- TESTIMONIAL -->
+<!-- ══════════════════════════════════════════ -->
+<section style="background: var(--off-white); padding: 0 40px 72px;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div class="testimonial-wrap">
+      <div class="quote-mark">"</div>
+      <div>
+        <p class="testimonial-text">
+          Premier Recycle Company provides unbelievable service and personal attention to detail.
+          They continually help us provide quality work for our customers.
+        </p>
+        <div class="testimonial-author">Ken Peterson</div>
+        <div class="testimonial-company">Devcon Construction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- TRACK RECORD -->
+<!-- ══════════════════════════════════════════ -->
+<section class="track-section">
+  <div class="track-inner">
+    <div class="section-eyebrow">Our Track Record</div>
+    <h2 class="section-title">We Know West Valley's Campus. We Know The Bay Area.</h2>
+    <p class="section-lead">
+      From landmark infrastructure to higher education campuses across the South Bay, Premier has handled C&amp;D recycling on some of the most demanding projects in the region — including right here at West Valley College.
+    </p>
+
+    <!-- Featured: West Valley Campus Projects -->
+    <div class="track-grid-featured">
+      <div class="track-card track-card--featured" style="background-image: url('Fox_1_night.jpg');">
+        <div class="track-card__inner">
+          <div class="track-card__label">West Valley College · Repeat Client</div>
+          <div class="track-card__name">M.E. Fox Technology Building</div>
+          <div class="track-card__location">Saratoga, CA</div>
+        </div>
+      </div>
+      <div class="track-card track-card--featured" style="background-image: url('west%20valley%20science%20and%20math.jpg');">
+        <div class="track-card__inner">
+          <div class="track-card__label">West Valley College · Repeat Client</div>
+          <div class="track-card__name">Science &amp; Math Addition</div>
+          <div class="track-card__location">Saratoga, CA</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secondary: Other Higher Ed -->
+    <div class="track-section-label">More Projects Across the Bay Area</div>
+    <div class="track-grid-secondary">
+      <div class="track-card" style="background-image: url('wellness.jpg');">
+        <div class="track-card__inner">
+          <div class="track-card__label">Higher Education</div>
+          <div class="track-card__name">Cañada College — Kinesiology &amp; Wellness</div>
+          <div class="track-card__location">Redwood City</div>
+        </div>
+      </div>
+      <div class="track-card" style="background-image: url('Skyline-College_Environmental-Science-Bldg_Night-View.jpg');">
+        <div class="track-card__inner">
+          <div class="track-card__label">Higher Education</div>
+          <div class="track-card__name">Skyline College — Farallon Room</div>
+          <div class="track-card__location">San Bruno</div>
+        </div>
+      </div>
+      <div class="track-card" style="background-image: url('UC-Santa-Cruz-Kresge-College-Renewal-Mass-Timber-Student-Housing-Mass-Timber-Residence-Halls-California-Facades-1122px.jpg');">
+        <div class="track-card__inner">
+          <div class="track-card__label">Higher Education</div>
+          <div class="track-card__name">UC Santa Cruz — Kresge College</div>
+          <div class="track-card__location">Santa Cruz</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Small: Corporate / Other -->
+    <div class="track-grid-small">
+      <div class="track-card track-card--placeholder" style="background-image: url('track_avaya_stadium.jpg');">
+        <div class="track-card__inner">
+          <div class="track-card__label">Sports</div>
+          <div class="track-card__name">Avaya Stadium</div>
+        </div>
+      </div>
+      <div class="track-card track-card--placeholder" style="background-image: url('track_apple_hq.jpg');">
+        <div class="track-card__inner">
+          <div class="track-card__label">Corporate</div>
+          <div class="track-card__name">Apple Headquarters</div>
+        </div>
+      </div>
+      <div class="track-card track-card--placeholder" style="background-image: url('track_google.jpg');">
+        <div class="track-card__inner">
+          <div class="track-card__label">Corporate</div>
+          <div class="track-card__name">Google Borreagas</div>
+        </div>
+      </div>
+      <div class="track-card track-card--placeholder" style="background-image: url('track_adobe.jpg');">
+        <div class="track-card__inner">
+          <div class="track-card__label">Corporate</div>
+          <div class="track-card__name">Adobe Building</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- PRICING -->
+<!-- ══════════════════════════════════════════ -->
+<section class="pricing-section">
+  <div class="pricing-inner">
+    <div class="section-eyebrow">Pricing</div>
+    <h2 class="section-title">Service Proposal Options</h2>
+    <p class="section-lead" style="margin-bottom: 32px;">
+      Base pricing is set on a per-bin service basis. State and local taxes and fees are included. Prices include all diversion documentation and, when applicable, preparation of building permit recycling refund requests.
+    </p>
+
+    <!-- Commingled Recycling Bins -->
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th style="width: 50%;">Service</th>
+          <th>Quantity</th>
+          <th>Ton Limit</th>
+          <th>Unit Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="group-header">
+          <td colspan="4">Commingled Recycling Bins</td>
+        </tr>
+        <tr>
+          <td>40yd Commingled Bin</td>
+          <td>Each</td>
+          <td>5 tons</td>
+          <td class="price-input">$822.94</td>
+        </tr>
+        <tr>
+          <td>20yd Commingled Bin</td>
+          <td>Each</td>
+          <td>3 tons</td>
+          <td class="price-input">$628.79</td>
+        </tr>
+
+        <tr class="group-header">
+          <td colspan="4">Single Item (Source Separated) Recycling Bins</td>
+        </tr>
+        <tr>
+          <td>40yd Wood Bin</td>
+          <td>Each</td>
+          <td>5 tons</td>
+          <td class="price-input">$684.85</td>
+        </tr>
+        <tr>
+          <td>40yd Sheetrock Bin</td>
+          <td>Each</td>
+          <td>5 tons</td>
+          <td class="price-input">$644.85</td>
+        </tr>
+        <tr>
+          <td>40yd or 20yd Metal Bin</td>
+          <td>Each</td>
+          <td>N/A</td>
+          <td class="price-input">Credit or Check</td>
+        </tr>
+        <tr>
+          <td>10yd Concrete Bin</td>
+          <td>Each</td>
+          <td>8 tons</td>
+          <td class="price-input">$607.56</td>
+        </tr>
+
+        <tr class="group-header">
+          <td colspan="4">Optional Additional Services</td>
+        </tr>
+        <tr>
+          <td>Recycling &amp; Diversion Reporting</td>
+          <td>Monthly</td>
+          <td>—</td>
+          <td><span class="included-badge">Included</span></td>
+        </tr>
+        <tr>
+          <td>Standard Waste Management Plan</td>
+          <td>One Time</td>
+          <td>—</td>
+          <td><span class="included-badge">Included</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Terms -->
+    <div class="terms-box">
+      <strong style="color: var(--navy); font-size: 0.85rem;">Terms &amp; Conditions</strong>
+      <ul>
+        <li>Overweight charges: $100/ton for Concrete bins; $130/ton for Recycling, Source Separated, Non-Recyclable, or Demolition bins over stated limits.</li>
+        <li>Metal-Only bins are not charged overweight fees and are credited based on market value minus transportation.</li>
+        <li>Driver standby fee of $150/hr applies if bin is not ready when dispatched (waived for delays under 20 minutes). After-hours service requests subject to additional charges.</li>
+        <li>Commingled Recycling bins must contain at least 65% recyclable material by weight and volume. Single-Item bins must contain 95%+ of a single item or will be reclassified.</li>
+        <li>Hazardous/Universal Solid Waste not accepted.</li>
+        <li>FIC fee (Facility Incoming Material Charge, currently $35.00) included on each invoice per service.</li>
+        <li>Prices are valid for 30 days and are for this project only. After 30 days, pricing may be subject to change. Tax rates and jurisdiction fees may change without notice.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SIGNATURE / CTA -->
+<!-- ══════════════════════════════════════════ -->
+<section class="sig-section">
+  <div class="sig-inner">
+    <div class="sig-cta">
+      <h2>Let's Get Started</h2>
+      <p>We're local, we're ready, and we know this campus. Let's make it easy.</p>
+    </div>
+
+    <div class="sig-grid">
+      <!-- Customer -->
+      <div class="sig-block">
+        <h4>Customer Authorization</h4>
+        <div class="sig-field">
+          <label>Customer Signature</label>
+          <div class="sig-line"></div>
+        </div>
+        <div class="sig-field">
+          <label>Printed Name and Title</label>
+          <div class="sig-line"></div>
+        </div>
+        <div class="sig-field">
+          <label>Date</label>
+          <div class="sig-line"></div>
+        </div>
+      </div>
+
+      <!-- Premier Recycle -->
+      <div class="sig-block" style="border-color: var(--navy);">
+        <h4>Premier Recycle Authorization</h4>
+        <div class="sig-field">
+          <label>Premier Recycle Signature</label>
+          <div class="sig-line"></div>
+        </div>
+        <div class="sig-field">
+          <label>Printed Name and Title</label>
+          <div class="sig-line"></div>
+        </div>
+        <div class="sig-field">
+          <label>Date</label>
+          <div class="sig-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- FOOTER -->
+<!-- ══════════════════════════════════════════ -->
+<footer>
+  Premier Recycle Company &nbsp;|&nbsp; 348 Phelan Avenue, San Jose, CA 95112 &nbsp;|&nbsp;
+  <a href="tel:4082977910">(408) 297-7910</a> &nbsp;|&nbsp;
+  <a href="https://premierrecycle.com" target="_blank">premierrecycle.com</a>
+</footer>
+
+</body>
+</html>
